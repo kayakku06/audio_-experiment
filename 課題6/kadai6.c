@@ -75,7 +75,7 @@ int main()
         fwrite(&sample_out, sizeof(int16_t), 1, fp_out);
 
         // 正規化後の出力データを書き出し
-        fprintf(fp_txt_filt, "%.6f\t%.6f\n", (double)n / FS, yn);
+        fprintf(fp_txt_filt, "%.6f\t%.6f\n", (double)n *1000/ FS, yn);
 
         n++;
     }
