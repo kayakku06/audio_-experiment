@@ -17,7 +17,7 @@ void save_text_data(const short *wave, int samples, const char *filename)
 
     for (int i = 0; i < samples; i++)
     {
-        double time = (double)i / SAMPLING_RATE;
+        double time = (double)i*1000 / SAMPLING_RATE;
         fprintf(fp, "%f\t%d\n", time, wave[i]);
     }
 
